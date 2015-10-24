@@ -18,6 +18,8 @@ if sys.argv[1] == None:
 	sys.exit()
 else:
 	no_headlines = int(sys.argv[1])
+	if no_headlines > 10:
+		no_headlines = 10
 
 # Raw page source from urllib2
 response = urllib2.urlopen("http://cnn.com")
